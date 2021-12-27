@@ -8,7 +8,7 @@
     <title>Document</title>
     <script src="script.js"></script>
 </head>
-<body>
+<body onload="fetchTable();">
     <div class="container mb-4">
         <div class="display-5 my-5">Student Details</div>
         <form name="student_form">
@@ -37,6 +37,7 @@
              </div>
            
             <button type="button" onclick="save_data();" class="btn btn-primary">Save</button>
+            <button type="button" onclick="update();" class="btn btn-primary">Update</button>
           </form>
     </div>
     <div class="container">
@@ -47,19 +48,11 @@
                 <th scope="col">Name</th>
                 <th scope="col">Age</th>
                 <th scope="col">City</th>
-                <th scope="col">Update</th>
+                <th scope="col">Actions</th>
               </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>S001</td>
-                    <td>Ali</td>
-                    <td>22</td>
-                    <td>KLM</td>
-                    <td>
-                        <button class="btn btn-sm btn-success">Edit</button>
-                    </td>
-                </tr>
+            <tbody id="tabledata">
+              
             </tbody>
           </table>
     </div>
